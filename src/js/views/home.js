@@ -19,6 +19,8 @@ return <div className="container-div">
 				key={element+thing.uid}
 				id={thing.uid}
 				type={element}
+				onClick={()=>{actions.addFavorite(thing, element)}}
+				isFavorite={store.favorites.find(elm => elm.name == thing.name)? "btn-danger" : "btn-secondary" }
 			/>))}
 		</div>
 	</div>
@@ -33,6 +35,8 @@ return <div className="container-div">
 				key={element+thing.uid}
 				id={thing.uid}
 				type={element}
+				onClick={()=>actions.addFavorite(thing, element)}
+				isFavorite={store.favorites.find(elm => elm.properties == thing.properties)? "btn-danger" : "btn-secondary" }
 			/>))}
 		</div>
 	</div>
