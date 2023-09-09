@@ -11,7 +11,8 @@ export const Card = (thing) =>
     backgroundPosition: "center"}}/>
   <div className="card-body">
     <h5 className="card-title">{thing.name}</h5>
-    <Link to={`/${thing.type}/${thing.id}`} className="btn btn-primary">Go somewhere</Link>
+    <Link to={`/${thing.type}/${thing.id}`} className="btn btn-primary">Read more...</Link>
+    <button className="btn btn-secondary float-end"><i className="fa-solid fa-heart"></i></button>
   </div>
 </div>
 ;

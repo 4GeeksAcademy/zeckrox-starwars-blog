@@ -19,17 +19,20 @@ const getState = ({ getStore, getActions, setStore }) => {
 			],
 			films: [
 
-			]
+			],
+			favorites: [
+
+			],
+			
 		},
 		actions: {
 			// Use getActions to call a function within a fuction
 			loadSomeData: () => {
 				const store = getStore();
 				let storeKeys = Object.keys(store)
-
 				
 				storeKeys.forEach(element => {
-					if(element!="films"){
+					if(element!="films" && element!="favorites"){
 					fetch("https://www.swapi.tech/api/"+element)
 					.then(function(response) {
 						if (!response.ok) {
@@ -53,21 +56,10 @@ const getState = ({ getStore, getActions, setStore }) => {
 			}
 		})
 	},
-
-			changeColor: (index, color) => {
-				//get the store
-				const store = getStore();
-
-				//we have to loop the entire demo array to look for the respective index
-				//and change its color
-				const demo = store.demo.map((elm, i) => {
-					if (i === index) elm.background = color;
-					return elm;
-				});
-
-				//reset the global store
-				setStore({ demo: demo });
-			}
+			titleCase: (string) => {
+					return string[0].toUpperCase() + string.slice(1).toLowerCase();
+				  }
+				  
 		}
 	};
 };

@@ -9,7 +9,7 @@ let storeKeys = Object.keys(store)
 
 return <div className="container-div">
 	{storeKeys.map((element)=>{
-		if(element!="films")
+		if(element!="films" && element!="favorites")
 	return <div className="cards-container" key={element}>
 		<h1>{element.toUpperCase()}</h1>
 		<div className="d-flex row flex-nowrap overflow-auto">
@@ -31,6 +31,8 @@ return <div className="container-div">
 			<Card
 				name={thing.properties.title}
 				key={element+thing.uid}
+				id={thing.uid}
+				type={element}
 			/>))}
 		</div>
 	</div>

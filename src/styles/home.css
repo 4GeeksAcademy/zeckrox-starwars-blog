@@ -18,23 +18,24 @@ body{
   border:black;
 }
 
-.btn{
+.btn-primary{
 background:#898800;
 border:#898800;
 }
 
-.btn:hover{
+.btn-primary:hover{
   background:#999900;
   border:#999900;
   }
 
-  .btn:active, .btn:focus{
+  .btn-primary:active, .btn-primary:focus{
     background:#a1a102;
     border:#a1a102;
     }
 
-    
+  
 
+/* SCROLL BAR */
 /* width */
 .cards-container ::-webkit-scrollbar {
     width: 10px;
