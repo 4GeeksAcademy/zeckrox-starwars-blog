@@ -27,7 +27,7 @@ export const Single = props => {
 	<div className="container">
 		<div className="container d-flex">
 			<div className="container-left">
-				<img src={`https://starwars-visualguide.com/assets/img/${params.category!="people"? params.category:"characters"}/${params.id}.jpg`}/>
+				<img className="rounded" src={`https://starwars-visualguide.com/assets/img/${params.category!="people"? params.category:"characters"}/${params.id}.jpg`}/>
 				<h1 className="display-4 text-white">{things.properties.name}</h1>
 			</div>
 			<div className="container-right">
@@ -62,7 +62,7 @@ export const Single = props => {
 	<div className="container">
 		<div className="container d-flex">
 			<div className="container-left">
-				<img src={`https://starwars-visualguide.com/assets/img/${params.category}/${params.id}.jpg`}/>
+				<img className="rounded" src={`https://starwars-visualguide.com/assets/img/${params.category}/${params.id}.jpg`}/>
 				<h1 className="display-4 text-white">{things.properties.title}</h1>
 			</div>
 			<div className="container-right">
